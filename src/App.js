@@ -4,6 +4,7 @@ import './App.css';
 
 class App extends Component {
 	handleOnClick = event => {
+		console.log(this.props)
 		this.props.increaseCount();
 	};
 
@@ -16,7 +17,7 @@ class App extends Component {
 		);
 	}
 }
-
+// These two are from { createStore }, they were passed down as props when we pass store in provider. It was the return value of createStore, dispatch and getState
 const mapStateToProps = state => {
 	return {
 		items: state.items
